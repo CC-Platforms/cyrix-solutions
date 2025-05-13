@@ -9,17 +9,9 @@ import Image from "next/image";
 export const HeroSection = () => {
   return (
     <section className="container w-full">
-      <div className="grid place-items-center lg:max-w-screen-xl mx-auto py-16 md:py-32">
+      <div className="grid place-items-center lg:max-w-screen-xl mx-auto py-16 md:py-20">
         <BackgroundBeamsWithCollision>
           <div className="text-center space-y-8 pb-20">
-            <Badge variant="outline" className="text-sm bg-muted py-2">
-              <span className="mr-2 text-primary">
-                <Badge className="bg-background text-foreground hover:bg-background">
-                  New
-                </Badge>
-              </span>
-              <span> Design is out now! </span>
-            </Badge>
             <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
               <h1>Smart Solutions to Grow Your Business</h1>
             </div>
