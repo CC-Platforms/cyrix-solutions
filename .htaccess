@@ -1,0 +1,26 @@
+# .htaccess file for Next.js static site
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Handle trailing slashes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+
+  # Handle client-side routing
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /index.html [L]
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Set default document
+DirectoryIndex index.html
+
+# Allow access to all files
+<FilesMatch ".*">
+  Order Allow,Deny
+  Allow from all
+</FilesMatch>

@@ -12,7 +12,7 @@ import { TestimonialSection } from "@/components/layout/sections/testimonial";
 export const metadata = {
   title: `Cosmic - Shadcn Landing Page Template`,
   description:
-    "Discover high-converting SaaS landing pages built with Next.js and Shadcn. Modern, responsive design and optimized features to elevate your brand's online presence.",
+    "Discover high-connverting SaaS landing pages built with Next.js and Shadcn. Modern, responsive design and optimized features to elevate your brand's online presence.",
   openGraph: {
     type: "website",
     url: "https://shadcnuikit.com/template/cosmic-landing-page-template",
