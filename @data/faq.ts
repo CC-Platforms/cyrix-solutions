@@ -6,39 +6,39 @@ interface FAQProps {
 
 export const FAQList: FAQProps[] = [
   {
-    question: "How does the free trial work?",
+    question: "What types of websites does Cyrix Tech Solutions build?",
     answer:
-      "Our free trial gives you access to all features for a limited time. No credit card is required, and you can cancel anytime.",
+      "We specialize in custom website development, including responsive business websites, e-commerce platforms, and interactive web apps tailored to your needs.",
     value: "item-1",
   },
   {
-    question: "Can I change my plan later?",
+    question: "How long does it take to build a custom website?",
     answer:
-      "Absolutely! You can upgrade, downgrade, or modify your plan at any time through your account settings.",
+      "Project timelines vary based on complexity, but most websites take 4-8 weeks. We provide a detailed timeline during our free consultation.",
     value: "item-2",
   },
   {
-    question: "Is customer support available 24/7?",
+    question: "Do you offer ongoing support after launch?",
     answer:
-      "Yes, our support team is available around the clock to assist you with any questions or issues.",
+      "Yes, our premium support includes 24/7 assistance, updates, and maintenance to ensure your website or app runs smoothly.",
     value: "item-3",
   },
   {
-    question: "How secure is my data?",
+    question: "How do you ensure my website is secure?",
     answer:
-      "We prioritize your data privacy with robust security protocols, including end-to-end encryption and GDPR compliance.",
+      "We implement HTTPS encryption, secure coding practices, and compliance with industry standards to protect your data and users.",
     value: "item-4",
   },
   {
-    question: "Do you offer custom plans for businesses?",
+    question: "Can you integrate my website with existing tools?",
     answer:
-      "Yes, we offer flexible, custom plans designed to meet the unique needs of businesses of all sizes. Contact us for more details.",
+      "Absolutely! We offer seamless integrations with tools like payment gateways, CRMs, and analytics platforms to enhance functionality.",
     value: "item-5",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "How do I get started with Cyrix Tech Solutions?",
     answer:
-      "We accept major credit cards, PayPal, and bank transfers for easy and convenient payment options.",
+      "Contact us at info@cyrixtechsolutions.com or book a free consultation via our website to discuss your project and goals.",
     value: "item-6",
   },
 ];

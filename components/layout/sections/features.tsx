@@ -9,10 +9,9 @@ export const FeaturesSection = () => {
   return (
     <SectionContainer id="features">
       <SectionHeader
-        subTitle="Features"
-        title="What Makes Us Different"
-        description="Unleash the power of our innovative features designed to streamline
-          your workflow, enhance decision-making, and drive business growth."
+        subTitle="Our Expertise"
+        title="What Sets Cyrix Tech Solutions Apart"
+        description="Explore the powerful features of our custom websites and software solutions, designed to drive growth, enhance efficiency, and elevate your brand."
       />
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {featureList.map(({ icon, title, description }) => (

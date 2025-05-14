@@ -9,51 +9,26 @@ interface ReviewProps {
 export const reviewList: ReviewProps[] = [
   {
     image: "/avatars/7.png",
-    name: "John Doe",
-    userName: "Product Manager",
+    name: "Michael Brown",
+    userName: "CEO, Retail Co.",
     comment:
-      "This platform transformed our workflow! The automation features saved us countless hours, and the support team is fantastic!",
+      "Cyrix Solutions transformed our outdated website into a high-converting platform. Their expertise is unmatched!",
     rating: 5.0,
   },
   {
-    image: "/avatars/6.png",
-    name: "Sophia Collins",
-    userName: "Cybersecurity Analyst",
+    image: "https://bricoree.com/assets/img/brillian/company_logo_circle.png",
+    name: "Pah Brillian Beng",
+    userName: "Founder, Brillian & Co Real Estate",
     comment:
-      "I can’t imagine running my business without this tool. The insights from the analytics have helped us make smarter decisions.",
-    rating: 4.8,
-  },
-
-  {
-    image: "/avatars/5.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
-    comment:
-      "The training sessions were invaluable. Our team is now fully equipped to utilize all the features effectively!",
-    rating: 4.9,
-  },
-  {
-    image: "/avatars/4.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
-    comment:
-      "Great integration options! Connecting our existing tools was a breeze, and it’s improved our overall efficiency.",
-    rating: 5.0,
+      "The website Cyrix built helped us market ourselves in the Real Estate space. Amazing features and irresistable design.",
+    rating: 4.0,
   },
   {
     image: "/avatars/5.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
+    name: "James Wilson",
+    userName: "CTO, SaaS Firm",
     comment:
-      "The customer support is top-notch. They’ve been there for us every step of the way, ensuring everything runs smoothly.",
-    rating: 5.0,
-  },
-  {
-    image: "/avatars/6.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
-    comment:
-      "I love the customization capabilities. It feels like this platform was built just for our business needs!",
+      "Their custom web app streamlined our operations, saving us hours daily. Highly professional service!",
     rating: 4.9,
   },
 ];

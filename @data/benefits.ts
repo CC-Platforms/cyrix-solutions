@@ -6,27 +6,27 @@ interface BenefitsProps {
 
 export const benefitList: BenefitsProps[] = [
   {
-    icon: "Blocks",
-    title: "AI-Powered Automation",
+    icon: "Globe",
+    title: "Custom Website Solutions",
     description:
-      "Save time and increase your efficiency by automating your routine business processes.",
+      "Get a tailored, responsive website that reflects your brand and drives conversions, built to meet your unique business needs.",
   },
   {
-    icon: "ChartLine",
-    title: "Real Time Data Analytics",
+    icon: "ShoppingCart",
+    title: "Scalable E-Commerce Platforms",
     description:
-      "We help you make more informed and strategic decisions by instantly analyzing your data.",
+      "Launch a secure, high-performance online store designed to boost sales and grow with your business.",
   },
   {
-    icon: "Wallet",
-    title: "Personalized Experience",
+    icon: "Code",
+    title: "Bespoke Web Applications",
     description:
-      "It offers flexible solutions with its adaptable structure according to the specific needs of your business.",
+      "Streamline operations with custom web apps that enhance user engagement and integrate seamlessly with your workflow.",
   },
   {
-    icon: "Sparkle",
-    title: "Scalable Structure",
+    icon: "Rocket",
+    title: "SEO-Optimized Performance",
     description:
-      "Move forward into the future with confidence, with an infrastructure that can expand as your business grows.",
+      "Increase visibility and attract high-ticket clients with fast, search-engine-optimized websites that deliver results.",
   },
 ];

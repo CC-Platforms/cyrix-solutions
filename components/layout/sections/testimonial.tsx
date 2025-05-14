@@ -24,8 +24,8 @@ export const TestimonialSection = () => {
   return (
     <SectionContainer id="testimonials">
       <SectionHeader
-        subTitle="Testimonials"
-        title="Hear What Our 1000+ Clients Say"
+        subTitle="Client Feedback"
+        title="What Our Clients Say About Us"
       />
       <Carousel
         opts={{
@@ -54,7 +54,7 @@ export const TestimonialSection = () => {
                 <CardHeader>
                   <div className="flex flex-row items-center gap-4">
                     <Avatar>
-                      <AvatarImage src={review.image} alt="shadcn ui kit" />
+                      <AvatarImage src={review.image} alt="Cyrix Solutions client" />
                       <AvatarFallback>SV</AvatarFallback>
                     </Avatar>
 

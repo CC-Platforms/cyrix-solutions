@@ -11,39 +11,39 @@ interface ServiceProps {
 
 export const serviceList: ServiceProps[] = [
   {
-    title: "Consultation Services",
+    title: "Free Project Consultation",
     description:
-      "Expert guidance tailored to identify opportunities and strategize effectively.",
+      "Get expert guidance to define your vision and strategize the perfect website or software solution.",
     pro: 0,
   },
   {
-    title: "Custom Domain Integration",
+    title: "Custom Website Design",
     description:
-      "Seamless integration of your unique domain for a professional online presence.",
+      "Create a stunning, responsive website tailored to your brand for a professional online presence.",
     pro: 0,
   },
   {
-    title: "Social Media Integrations",
+    title: "Basic SEO Setup",
     description:
-      "Connect with popular platforms to enhance your online engagement and reach.",
+      "Kickstart your visibility with essential SEO strategies to attract your target audience.",
     pro: 0,
   },
   {
-    title: "Email Marketing Integrations",
+    title: "E-Commerce Development",
     description:
-      "Effortlessly connect email marketing tools to streamline your campaigns.",
-    pro: 1,
+      "Launch a secure, scalable online store with advanced features to boost sales and engagement.",
+    pro: 0,
   },
   {
-    title: "SEO Optimization",
+    title: "Custom Web App Development",
     description:
-      "Improve your search engine visibility with tailored optimization strategies.",
-    pro: 1,
+      "Build bespoke web applications to streamline operations and enhance user experiences.",
+    pro: 0,
   },
   {
-    title: "Ongoing Support",
+    title: "Premium Support & Maintenance",
     description:
-      "24/7 customer support to ensure smooth operations and address any issues.",
-    pro: 1,
+      "Enjoy 24/7 support and ongoing updates to keep your website or app running smoothly.",
+    pro: 0,
   },
 ];

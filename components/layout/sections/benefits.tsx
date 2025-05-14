@@ -13,12 +13,9 @@ export const BenefitsSection = () => {
         <div>
           <SectionHeader
             className="sticky lg:top-[22rem] text-center lg:text-start max-w-full"
-            subTitle="Benefits"
-            title="What Do We Bring to You?"
-            description="All the innovative solutions you need to grow your business are
-              here! We add value to your business with our features that
-              simplify your workflow, increase efficiency and strengthen your
-              decisions."
+            subTitle="Why Choose Us"
+            title="What Cyrix Tech Solutions Brings to You"
+            description="Discover innovative website and software solutions designed to elevate your business. Our expertise simplifies your digital transformation, boosts efficiency, and drives measurable growth."
           />
         </div>
 

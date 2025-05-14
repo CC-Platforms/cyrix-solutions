@@ -13,10 +13,9 @@ export const ServicesSection = () => {
   return (
     <SectionContainer id="solutions">
       <SectionHeader
-        subTitle="Services"
-        title="Grow Your Business"
-        description="From marketing and sales to operations and strategy, we have the
-          expertise to help you achieve your goals."
+        subTitle="Our Services"
+        title="Grow Your Business with Cyrix Tech Solutions"
+        description="From custom websites to advanced web apps, our expert solutions drive growth, enhance efficiency, and elevate your brand."
       />
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-screen-lg mx-auto">
         {serviceList.map(({ title, description, pro }) => (

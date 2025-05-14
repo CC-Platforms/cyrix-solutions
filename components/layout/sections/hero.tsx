@@ -12,20 +12,31 @@ export const HeroSection = () => {
         <BackgroundBeamsWithCollision>
           <div className="text-center space-y-8 pb-20">
             <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
-              <h1>Smart Solutions to Grow Your Business</h1>
+              <h1>Elevate Your Business with Premium Software Solutions</h1>
             </div>
             <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-              {`Meet our AI-powered SaaS solution to lighten your workload, increase efficiency and make more accurate decisions.`}
+              Cyrix Tech Solutions delivers custom websites and web apps that drive growth, streamline operations, and boost conversions for your business.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4">
-              <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-                Get Started
-                <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-              </Button>
+                <Button
+                className="w-5/6 md:w-1/4 font-bold group/arrow"
+                asChild
+                >
+                <a href="#contact">
+                  Let's Talk
+                  <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+                </a>
+                </Button>
 
-              <Button variant="secondary" className="w-5/6 md:w-1/4 font-bold">
-                Learn More
-              </Button>
+                <Button
+                variant="secondary"
+                className="w-5/6 md:w-1/4 font-bold"
+                asChild
+                >
+                <a href="#portfolio">
+                  Explore Our Work
+                </a>
+                </Button>
             </div>
           </div>
         </BackgroundBeamsWithCollision>
@@ -38,16 +49,16 @@ export const HeroSection = () => {
           <Image
             width={1240}
             height={1200}
-            className="w-full  mx-auto rounded-lg relative rouded-lg leading-none flex items-center dark:hidden"
+            className="w-full mx-auto rounded-lg relative rouded-lg leading-none flex items-center dark:hidden"
             src="/hero-image-light.png"
-            alt="shadcn landing page"
+            alt="Cyrix Solutions website preview"
           />
           <Image
             width={1240}
             height={1200}
-            className="w-full  mx-auto rounded-lg relative rouded-lg leading-none dark:flex items-center hidden"
+            className="w-full mx-auto rounded-lg relative rouded-lg leading-none dark:flex items-center hidden"
             src="/hero-image-dark.png"
-            alt="shadcn landing page"
+            alt="Cyrix Solutions website preview"
           />
 
           <div className="absolute bottom-0 left-0 w-full h-20 md:h-32 bg-gradient-to-b from-background/0 via-background/60 to-background rounded-lg"></div>

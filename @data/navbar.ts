@@ -11,37 +11,42 @@ interface ProductProps {
 
 export const routeList: RouteProps[] = [
   {
-    href: "#solutions",
-    label: "Solutions",
+    href: "#services",
+    label: "Services",
   },
   {
-    href: "#pricing",
-    label: "Pricing",
+    href: "#portfolio",
+    label: "Portfolio",
   },
   {
-    href: "#team",
-    label: "Team",
+    href: "#testimonials",
+    label: "Testimonials",
   },
   {
     href: "#contact",
     label: "Contact",
   },
+  {
+    href: "#faq",
+    label: "FAQ",
+  },
 ];
 
 export const productList: ProductProps[] = [
   {
-    title: "LaunchPad",
-    icon: "Frame",
-    description: "Launch high-impact pages effortlessly.",
+    title: "Custom Websites",
+    icon: "Globe",
+    description: "Build stunning, responsive websites tailored to your brand.",
   },
   {
-    title: "Orbit Analytics",
-    icon: "ChartScatter",
-    description: "Powerful insights for smarter decisions.",
+    title: "E-Commerce Solutions",
+    icon: "ShoppingCart",
+    description: "Launch secure, scalable online stores to boost sales.",
   },
   {
-    title: "Nova Integrator",
-    icon: "Blocks",
-    description: "Seamless connections with your favorite tools.",
+    title: "Web Applications",
+    icon: "Code",
+    description: "Develop custom web apps for streamlined operations.",
   },
 ];
+

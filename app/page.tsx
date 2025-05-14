@@ -10,29 +10,31 @@ import { TeamSection } from "@/components/layout/sections/team";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: `Cosmic - Shadcn Landing Page Template`,
+  title: "Cyrix Solutions - Premium Software & Website Development",
   description:
-    "Discover high-connverting SaaS landing pages built with Next.js and Shadcn. Modern, responsive design and optimized features to elevate your brand's online presence.",
+    "Transform your business with custom websites and software solutions from Cyrix Solutions. High-converting, responsive designs to elevate your brand.",
   openGraph: {
     type: "website",
-    url: "https://shadcnuikit.com/template/cosmic-landing-page-template",
-    title: "Cosmic - Landing Page Template (Shadcn)",
-    description: "Shadcn landing page template for developers",
+    url: "https://cyrixtechsolutions.com",
+    title: "Cyrix Tech Solutions -  Tech That Works For You",
+    description:
+      "Discover expert website development and software solutions tailored for your business growth.",
     images: [
       {
-        url: "/seo.jpg",
+        url: "/og-image.jpg", // Placeholder for your image
         width: 1200,
         height: 630,
-        alt: "Cosmic - Landing Page Template",
+        alt: "Cyrix Solutions Website",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://shadcnuikit.com/template/cosmic-landing-page-template",
-    title: "Cosmic - Landing Page Template (Shadcn)",
-    description: "Shadcn landing page template for developers",
-    images: ["/seo.jpg"],
+    site: "https://cyrixtechsolutions.com",
+    title: "Cyrix Solutions - Tech That Works For You",
+    description:
+      "Expert website development and software solutions for businesses.",
+    images: ["/og-image.jpg"], // Placeholder for your image
   },
 };
 
@@ -42,13 +44,13 @@ export default function Home() {
       <HeroSection />
       {/* <SponsorsSection /> */}
       <BenefitsSection />
-      <FeaturesSection />
       <ServicesSection />
+      <FeaturesSection />
       <TestimonialSection />
       <TeamSection />
       <ContactSection />
       <FAQSection />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
       <FooterSection />
     </>
   );
