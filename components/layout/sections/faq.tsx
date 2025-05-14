@@ -10,7 +10,7 @@ import SectionContainer from "../section-container";
 
 export const FAQSection = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id="faq">
       <SectionHeader subTitle="FAQS" title="Common Questions" />
       <div className="max-w-screen-md mx-auto">
         <Accordion type="single" collapsible className="AccordionRoot">

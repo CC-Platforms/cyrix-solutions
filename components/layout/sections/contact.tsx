@@ -41,7 +41,7 @@ export const ContactSection = () => {
       firstName: "",
       lastName: "",
       email: "",
-      subject: "Web Development",
+      subject: "Custom Website Development",
       message: "",
     },
   });
@@ -50,7 +50,7 @@ export const ContactSection = () => {
     const { firstName, lastName, email, subject, message } = values;
     console.log(values);
 
-    const mailToLink = `mailto:leomirandadev@gmail.com?subject=${subject}&body=Hello I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
+    const mailToLink = `mailto:info@cyrixtechsolutions.com?subject=${subject}&body=Hello, I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
 
     window.location.href = mailToLink;
   }
@@ -58,10 +58,9 @@ export const ContactSection = () => {
   return (
     <SectionContainer id="contact">
       <SectionHeader
-        subTitle="Contact"
-        title="Get Connect With Us access"
-        description=" Stay in touch with us for updates, support, and valuable insights.
-          We’re here to help you every step of the way!"
+        subTitle="Get in Touch"
+        title="Connect with Cyrix Tech Solutions"
+        description="Ready to transform your business with a custom website or web app? Contact us today for expert solutions and personalized support."
       />
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
@@ -72,16 +71,25 @@ export const ContactSection = () => {
                 <div className="font-bold">Location:</div>
               </div>
               <div className="text-muted-foreground">
-                123 Maple Lane, Springfield, IL 62704
+                Buea, Cameroon
               </div>
             </div>
 
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <Phone className="size-5" />
-                <div className="font-bold">Call us:</div>
+                <div className="font-bold">Chat with us:</div>
               </div>
-              <div className="text-muted-foreground">+1 (555) 987-6543</div>
+              <div className="text-muted-foreground">
+                <a
+                  href="https://wa.me/+237651085550?text=Hello%20Cyrix%20Tech%20Solutions,%20I'm%20interested%20in%20your%20services!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:underline"
+                >
+                  Message us on WhatsApp
+                </a>
+              </div>
             </div>
 
             <div>
@@ -90,7 +98,7 @@ export const ContactSection = () => {
                 <div className="font-bold">Email us:</div>
               </div>
               <div className="text-muted-foreground">
-                contact@ourcompany.com
+                info@cyrixtechsolutions.com
               </div>
             </div>
 
@@ -100,7 +108,7 @@ export const ContactSection = () => {
                 <div className="font-bold">Business Hours:</div>
               </div>
               <div className="text-muted-foreground">
-                Tuesday to Saturday, 9 AM - 5 PM
+                Monday to Saturday, 9 AM - 6 PM
               </div>
             </div>
           </div>
@@ -121,7 +129,7 @@ export const ContactSection = () => {
                       <FormItem className="w-full">
                         <FormLabel>First Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Leopoldo" {...field} />
+                          <Input placeholder="John" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -134,7 +142,7 @@ export const ContactSection = () => {
                       <FormItem className="w-full">
                         <FormLabel>Last Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Miranda" {...field} />
+                          <Input placeholder="Doe" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -152,7 +160,7 @@ export const ContactSection = () => {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="contact@bundui.com"
+                            placeholder="john.doe@example.com"
                             {...field}
                           />
                         </FormControl>
@@ -179,18 +187,23 @@ export const ContactSection = () => {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="Web Development">
-                              Web Development
+                            <SelectItem value="Custom Website Development">
+                              Website Development
                             </SelectItem>
-                            <SelectItem value="Mobile Development">
-                              Mobile Development
+                            <SelectItem value="E-Commerce Solutions">
+                              E-Commerce Solutions
                             </SelectItem>
-                            <SelectItem value="Figma Design">
-                              Figma Design
+                            <SelectItem value="Web App Development">
+                              Web App Development
                             </SelectItem>
-                            <SelectItem value="REST API">REST API</SelectItem>
-                            <SelectItem value="FullStack Project">
-                              FullStack Project
+                            <SelectItem value="Custom Website Development">
+                              App Development
+                            </SelectItem>
+                            <SelectItem value="SEO Optimization">
+                              SEO Optimization
+                            </SelectItem>
+                            <SelectItem value="Consultation">
+                              Consultation
                             </SelectItem>
                           </SelectContent>
                         </Select>
@@ -210,19 +223,18 @@ export const ContactSection = () => {
                         <FormControl>
                           <Textarea
                             rows={5}
-                            placeholder="Your message..."
+                            placeholder="Tell us about your project..."
                             className="resize-none"
                             {...field}
                           />
                         </FormControl>
-
                         <FormMessage />
                       </FormItem>
                     )}
                   />
                 </div>
 
-                <Button className="mt-4">Send message</Button>
+                <Button className="mt-4">Send Message</Button>
               </form>
             </Form>
           </CardContent>

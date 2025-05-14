@@ -84,16 +84,16 @@ export const Navbar = () => {
           <NavigationMenu className="hidden lg:block mx-auto">
             <NavigationMenuList className="space-x-0">
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:!bg-transparent">
-                  Products
-                </NavigationMenuTrigger>
+                {/* <NavigationMenuTrigger className="bg-transparent hover:!bg-transparent">
+                  Services
+                </NavigationMenuTrigger> */}
                 <NavigationMenuContent>
                   <div className="w-[300px] gap-5 p-2">
                     <ul className="flex flex-col">
                       {productList.map(({ title, description, icon }) => (
                         <li key={title}>
                           <Link
-                            href="/"
+                            href="#services"
                             className="flex gap-6 items-start rounded-md p-4 text-sm hover:bg-muted"
                           >
                             <div className="flex items-center justify-center size-8 bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
@@ -143,14 +143,13 @@ export const Navbar = () => {
               asChild
               size="sm"
               className="ms-2"
-              aria-label="Get Template"
+              aria-label="Contact Us"
             >
               <Link
-                aria-label="Get Template"
-                href="https://bundui.lemonsqueezy.com/buy/1bdac9fb-8246-494a-b28c-6c2ca6a28867"
-                target="_blank"
+                aria-label="Contact Us"
+                href="#contact"
               >
-                Get Template
+                Contact Us
               </Link>
             </Button>
           </div>

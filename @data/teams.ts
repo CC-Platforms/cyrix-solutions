@@ -14,66 +14,44 @@ interface SocialNetworkProps {
 export const teamList: TeamProps[] = [
   {
     imageUrl:
-      "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Michael",
-    lastName: "Holland",
-    positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
+      "/avatars/mesueh_ndumbe_christien.jpeg",
+    firstName: "Mesueh Christien",
+    lastName: "Ndumbe",
+    positions: ["WordPress", "React", "React Native", "NextJS", "Laravel", "..." ],
     socialNetworks: [
+      // {
+      //   name: "LinkedIn",
+      //   url: "#",
+      // },
       {
-        name: "LinkedIn",
-        url: "https://shadcnuikit.com/",
+        name: "Github",
+        url: "https://github.com/christienMD",
+      },
+      {
+        name: "Website",
+        url: "https://mdchristien-portfolio.vercel.app/",
       },
     ],
   },
   {
     imageUrl:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Zoe",
-    lastName: "Garcia",
-    positions: ["JavaScript Evangelist", "Deno Champion"],
+      "/avatars/nkwi_cyril_akinimbom.jpg",
+    firstName: "Nkwi Cyril",
+    lastName: "Akinimbom",
+    positions: ["WordPress", "Shopify", "Laravel", "Flutter", "React", "..."],
     socialNetworks: [
       {
         name: "LinkedIn",
-        url: "https://shadcnuikit.com/",
+        url: "https://www.linkedin.com/in/nkwicyril/",
       },
       {
         name: "Github",
-        url: "https://github.com/bundui",
-      },
-    ],
-  },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Evan",
-    lastName: "James",
-    positions: ["Backend Developer"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://shadcnuikit.com/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/bundui",
+        url: "https://github.com/NkwiCyril",
       },
       {
         name: "X",
-        url: "https://x.com/TobyBelhome",
+        url: "https://x.com/NkwiCyril",
       },
     ],
-  },
-  {
-    imageUrl:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Pam",
-    lastName: "Taylor",
-    positions: ["Fullstack Developer", "UX Researcher"],
-    socialNetworks: [
-      {
-        name: "X",
-        url: "https://x.com/TobyBelhome",
-      },
-    ],
-  },
+  }
 ];

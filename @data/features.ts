@@ -6,39 +6,39 @@ interface FeaturesProps {
 
 export const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "AI-Powered Task Management",
+    icon: "Globe",
+    title: "Responsive Web Design",
     description:
-      "Utilize machine learning algorithms to prioritize tasks, ensuring your team focuses on what matters most.",
+      "Deliver seamless user experiences across all devices with fully responsive websites tailored to your brand.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Predictive Analytics",
+    icon: "Search",
+    title: "SEO Optimization",
     description:
-      "Leverage historical data to forecast trends and make proactive decisions, minimizing risks and maximizing opportunities.",
+      "Boost your online visibility with search-engine-optimized websites that rank higher and attract high-ticket clients.",
   },
   {
-    icon: "Goal",
-    title: "Custom Workflow Automation",
+    icon: "ShoppingCart",
+    title: "E-Commerce Integration",
     description:
-      "Design automated workflows tailored to your processes, integrating multiple tools to streamline operations seamlessly.",
+      "Launch secure, scalable online stores with integrated payment gateways to maximize sales and customer satisfaction.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Robust API Integrations",
+    icon: "Code",
+    title: "Custom Web Apps",
     description:
-      "Easily connect our platform with your existing software solutions, enabling data synchronization and enhancing functionality.",
+      "Build interactive, cloud-based web applications that streamline operations and enhance user engagement.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Interactive Dashboards",
+    icon: "Gauge",
+    title: "High-Performance Sites",
     description:
-      "Visualize key performance indicators (KPIs) and metrics in real-time with customizable dashboards that provide actionable insights.",
+      "Experience fast-loading websites optimized for performance, ensuring low bounce rates and high conversions.",
   },
   {
-    icon: "Lock",
-    title: "Privacy and Compliance",
+    icon: "Shield",
+    title: "Robust Security",
     description:
-      "Ensure your data is protected with end-to-end encryption and compliance with regulations such as GDPR and CCPA.",
+      "Protect your data with HTTPS encryption and compliance with industry standards, ensuring trust and reliability.",
   },
 ];
