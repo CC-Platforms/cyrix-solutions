@@ -60,21 +60,7 @@ jobs:
         run: |
           cp .htaccess ./out/
       
-      # Debug with simple output - no invalid functions
-      - name: Debug Secrets
-        run: |
-          echo "Checking if secrets exist (values will be masked):"
-          echo "SSH_HOST: ${{ secrets.SSH_HOST != '' && 'exists' || 'missing' }}"
-          echo "SSH_USERNAME: ${{ secrets.SSH_USERNAME != '' && 'exists' || 'missing' }}"
-          echo "SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY != '' && 'exists' || 'missing' }}"
-          echo "SSH_TARGET_DIR: ${{ secrets.SSH_TARGET_DIR != '' && 'exists' || 'missing' }}"
-          
-          # Set explicit environment variables
-          echo "REMOTE_HOST=82.25.96.67" >> $GITHUB_ENV
-          echo "REMOTE_USER=u995357878" >> $GITHUB_ENV
-          echo "REMOTE_PORT=65002" >> $GITHUB_ENV
-      
-      # Try using a different SSH deployment action
+      # Deploy using the action that worked
       - name: Deploy to Hostinger via SSH
         uses: burnett01/rsync-deployments@5.2.1
         with:
@@ -86,21 +72,8 @@ jobs:
           remote_user: ${{ secrets.SSH_USERNAME || 'u995357878' }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
       
-      # Fallback to FTP if SSH fails
-      - name: Deploy via FTP (Alternative)
-        if: ${{ failure() }}  # Only run if the SSH deployment fails
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_HOST || '82.25.96.67' }}
-          username: ${{ secrets.FTP_USERNAME || 'u995357878' }}
-          password: ${{ secrets.FTP_PASSWORD || 'Cyrix10$' }}
-          local-dir: ./out/
-          server-dir: ${{ secrets.FTP_SERVER_DIR || '/domains/cyrixtechsolutions.com/public_html/' }}
-          dangerous-clean-slate: true
-      
-      # Simple SSH test as a last resort
-      - name: Test SSH Connection
-        if: ${{ always() }}  # Run regardless of previous steps
+      # Fix permissions after deployment
+      - name: Fix Permissions
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SSH_HOST || '82.25.96.67' }}
@@ -108,7 +81,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME || 'u995357878' }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            echo "SSH connection successful!"
-            echo "Current directory: $(pwd)"
-            mkdir -p /home/u995357878/domains/cyrixtechsolutions.com/public_html/ || true
-            echo "Directory created/verified"
+            cd ${{ secrets.SSH_TARGET_DIR || '/home/u995357878/domains/cyrixtechsolutions.com/public_html/' }}
+            find . -type d -exec chmod 755 {} \;
+            find . -type f -exec chmod 644 {} \;
+            echo "Deployment complete and permissions fixed!"
