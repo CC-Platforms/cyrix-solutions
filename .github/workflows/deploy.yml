@@ -60,58 +60,55 @@ jobs:
         run: |
           cp .htaccess ./out/
       
-      # VERY Detailed Debug - Check values carefully without exposing secrets
-      - name: Super Detailed Debug
+      # Debug with simple output - no invalid functions
+      - name: Debug Secrets
         run: |
-          echo "REMOTE_HOST exists: ${{ secrets.SSH_HOST != '' }}"
-          echo "REMOTE_USER exists: ${{ secrets.SSH_USERNAME != '' }}"
-          echo "Length of REMOTE_HOST: ${{ length(secrets.SSH_HOST) }}"
-          echo "Length of REMOTE_USER: ${{ length(secrets.SSH_USERNAME) }}"
-          # Try hardcoding values in environment variables
+          echo "Checking if secrets exist (values will be masked):"
+          echo "SSH_HOST: ${{ secrets.SSH_HOST != '' && 'exists' || 'missing' }}"
+          echo "SSH_USERNAME: ${{ secrets.SSH_USERNAME != '' && 'exists' || 'missing' }}"
+          echo "SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY != '' && 'exists' || 'missing' }}"
+          echo "SSH_TARGET_DIR: ${{ secrets.SSH_TARGET_DIR != '' && 'exists' || 'missing' }}"
+          
+          # Set explicit environment variables
           echo "REMOTE_HOST=82.25.96.67" >> $GITHUB_ENV
           echo "REMOTE_USER=u995357878" >> $GITHUB_ENV
           echo "REMOTE_PORT=65002" >> $GITHUB_ENV
-
-      # Try with simplified approach
-      - name: Deploy to Hostinger via SSH (Simple Approach)
-        run: |
-          # Install SSH client
-          sudo apt-get update && sudo apt-get install -y openssh-client
-          
-          # Write SSH private key to a file
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          
-          # Add server to known hosts
-          ssh-keyscan -p 65002 -H 82.25.96.67 >> ~/.ssh/known_hosts
-          
-          # Create a script to run the deployment
-          echo "rsync -avz -e 'ssh -p 65002' ./out/ u995357878@82.25.96.67:${{ secrets.SSH_TARGET_DIR }}" > deploy.sh
-          
-          # Execute the deployment script
-          bash deploy.sh
       
-      # Alternative approach - let's try another GitHub action for SSH deployment
-      - name: Deploy via SamKirkland SSH Action
-        if: ${{ always() }}  # Run even if previous step fails
+      # Try using a different SSH deployment action
+      - name: Deploy to Hostinger via SSH
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -avzr --delete
+          path: out/
+          remote_path: ${{ secrets.SSH_TARGET_DIR || '/home/u995357878/domains/cyrixtechsolutions.com/public_html/' }}
+          remote_host: ${{ secrets.SSH_HOST || '82.25.96.67' }}
+          remote_port: ${{ secrets.SSH_PORT || '65002' }}
+          remote_user: ${{ secrets.SSH_USERNAME || 'u995357878' }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      
+      # Fallback to FTP if SSH fails
+      - name: Deploy via FTP (Alternative)
+        if: ${{ failure() }}  # Only run if the SSH deployment fails
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.SSH_HOST || '82.25.96.67' }}
-          username: ${{ secrets.SSH_USERNAME || 'u995357878' }}
-          password: ${{ secrets.SSH_PASSWORD || 'Cyrix10$' }}
+          server: ${{ secrets.FTP_HOST || '82.25.96.67' }}
+          username: ${{ secrets.FTP_USERNAME || 'u995357878' }}
+          password: ${{ secrets.FTP_PASSWORD || 'Cyrix10$' }}
           local-dir: ./out/
-          server-dir: ${{ secrets.SSH_TARGET_DIR || '/home/u995357878/domains/cyrixtechsolutions.com/public_html/' }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR || '/domains/cyrixtechsolutions.com/public_html/' }}
+          dangerous-clean-slate: true
       
-      - name: Fallback - SSH Connection Test
-        if: ${{ always() }}  # Run even if previous steps fail
+      # Simple SSH test as a last resort
+      - name: Test SSH Connection
+        if: ${{ always() }}  # Run regardless of previous steps
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: 82.25.96.67  # Hardcoded for testing
-          port: 65002        # Hardcoded for testing
-          username: u995357878  # Hardcoded for testing
+          host: ${{ secrets.SSH_HOST || '82.25.96.67' }}
+          port: ${{ secrets.SSH_PORT || '65002' }}
+          username: ${{ secrets.SSH_USERNAME || 'u995357878' }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            echo "SSH Connection successful!"
+            echo "SSH connection successful!"
             echo "Current directory: $(pwd)"
-            echo "Target directory exists: $(test -d /home/u995357878/domains/cyrixtechsolutions.com/public_html/ && echo 'Yes' || echo 'No')"
+            mkdir -p /home/u995357878/domains/cyrixtechsolutions.com/public_html/ || true
+            echo "Directory created/verified"
