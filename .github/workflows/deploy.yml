@@ -59,32 +59,22 @@ jobs:
           export URL="${{ secrets.NEXT_PUBLIC_URL || '' }}"
           npm run build
       
-      # Debug - Print all secrets (masked but shows if they exist)
-      - name: Debug Secrets
-        run: |
-          echo "Checking if secrets exist (values will be masked):"
-          echo "SSH_HOST: ${{ secrets.SSH_HOST }}"
-          echo "SSH_PORT: ${{ secrets.SSH_PORT }}"
-          echo "SSH_USERNAME: ${{ secrets.SSH_USERNAME }}"
-          echo "SSH_PRIVATE_KEY exists: ${{ secrets.SSH_PRIVATE_KEY != '' }}"
-          echo "SSH_TARGET_DIR: ${{ secrets.SSH_TARGET_DIR }}"
-      
       - name: Copy .htaccess to build output
         run: |
           cp .htaccess ./out/
       
+      # Deploy using the CORRECT parameter names from the error message
       - name: Deploy to Hostinger via SSH
         uses: easingthemes/ssh-deploy@v4.1.8
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: "out/"  # Next.js build output directory
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_PORT: ${{ secrets.SSH_PORT || '65002' }}
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          SOURCE: "out/"  # Next.js build output directory
           TARGET: ${{ secrets.SSH_TARGET_DIR }}
           EXCLUDE: "node_modules/, .git/, .github/"
           ARGS: "-rltgoDzvO --delete"  # Add --delete to remove old files
-          DEBUG: true  # Enable debugging
       
       - name: Fix Permissions
         uses: appleboy/ssh-action@v1.0.0
