@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BackgroundBeamsWithCollision } from "@/components/ui/extras/background-beams-with-collision";
 import { ArrowRight } from "lucide-react";
