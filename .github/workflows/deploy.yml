@@ -20,6 +20,38 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       
+      # Create .htaccess file for the build output
+      - name: Create .htaccess file
+        run: |
+          cat > .htaccess << 'EOL'
+          # .htaccess file for Next.js static site
+          <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteBase /
+            
+            # Handle trailing slashes
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+          
+            # Handle client-side routing
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule ^(.*)$ /index.html [L]
+          </IfModule>
+          
+          # Prevent directory listing
+          Options -Indexes
+          
+          # Set default document
+          DirectoryIndex index.html
+          
+          # Allow access to all files
+          <FilesMatch ".*">
+            Order Allow,Deny
+            Allow from all
+          </FilesMatch>
+          EOL
+      
       - name: Build Next.js
         run: |
           # Apply environment variables to the build
@@ -29,7 +61,7 @@ jobs:
       
       - name: Copy .htaccess to build output
         run: |
-          cp .htaccess ./out/ 2>/dev/null || echo "No .htaccess file found, skipping"
+          cp .htaccess ./out/
       
       - name: Deploy to Hostinger via SSH
         uses: easingthemes/ssh-deploy@v4.1.8
@@ -41,6 +73,7 @@ jobs:
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           TARGET: ${{ secrets.SSH_TARGET_DIR }}
           EXCLUDE: "node_modules/, .git/, .github/"
+          ARGS: "-rltgoDzvO --delete"  # Add --delete to remove old files
       
       - name: Fix Permissions
         uses: appleboy/ssh-action@v1.0.0
