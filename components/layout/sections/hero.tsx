@@ -23,7 +23,7 @@ export const HeroSection = () => {
                 asChild
                 >
                 <a href="#contact">
-                  Let's Talk
+                  Let&apos;s Talk
                   <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
                 </a>
                 </Button>
