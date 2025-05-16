@@ -54,7 +54,7 @@ export function TeamSection() {
                       alt=""
                       width={300}
                       height={300}
-                      className="w-full aspect-square object-cover transition-all duration-200 ease-linear size-full "
+                      className="w-full aspect-square object-cover saturate-0 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]"
                     />
                   </div>
                   <CardTitle className="py-6 pb-4 px-6">
