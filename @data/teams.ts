@@ -14,7 +14,7 @@ interface SocialNetworkProps {
 export const teamList: TeamProps[] = [
   {
     imageUrl:
-      "/avatars/mesueh_ndumbe_christien.jpeg",
+      "/avatars/mesueh_christien_ndumbe.jpg",
     firstName: "Mesueh Christien",
     lastName: "Ndumbe",
     positions: ["Co-founder, Full-Stack Developer, Frontend Developer"],
