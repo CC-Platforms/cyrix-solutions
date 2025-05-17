@@ -17,7 +17,7 @@ export const teamList: TeamProps[] = [
       "/avatars/mesueh_christien_ndumbe.jpg",
     firstName: "Mesueh Christien",
     lastName: "Ndumbe",
-    positions: ["Co-founder, Full-Stack Developer, Frontend Developer"],
+    positions: ["Full-Stack Developer, Frontend Developer"],
     socialNetworks: [
       // {
       //   name: "LinkedIn",
@@ -38,7 +38,7 @@ export const teamList: TeamProps[] = [
       "/avatars/nkwi_cyril_akinimbom.jpg",
     firstName: "Nkwi Cyril",
     lastName: "Akinimbom",
-    positions: ["Co-Founder, Full-Stack Developer, Mobile App Developer"],
+    positions: ["Full-Stack Developer, Mobile App Developer"],
     socialNetworks: [
       {
         name: "LinkedIn",
