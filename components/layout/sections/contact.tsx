@@ -98,7 +98,12 @@ export const ContactSection = () => {
                 <div className="font-bold">Email us:</div>
               </div>
               <div className="text-muted-foreground">
-                info@cyrixtechsolutions.com
+                <a 
+                  href="mailto:info@cyrixtechsolutions.com"
+                  className="inline-flex items-center gap-2 text-primary hover:underline"
+                >
+                  info@cyrixtechsolutions.com
+                </a>
               </div>
             </div>
 
@@ -196,7 +201,7 @@ export const ContactSection = () => {
                             <SelectItem value="Web App Development">
                               Web App Development
                             </SelectItem>
-                            <SelectItem value="Custom Website Development">
+                            <SelectItem value="App Development">
                               App Development
                             </SelectItem>
                             <SelectItem value="SEO Optimization">
