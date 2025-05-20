@@ -13,11 +13,10 @@ interface SocialNetworkProps {
 
 export const teamList: TeamProps[] = [
   {
-    imageUrl:
-      "/avatars/mesueh_christien_ndumbe.jpg",
+    imageUrl: "/avatars/mesueh_christien_ndumbe.jpg",
     firstName: "Mesueh Christien",
     lastName: "Ndumbe",
-    positions: ["WordPress", "Full-Stack Developer", "Frontend Developer"],
+    positions: ["Frontend Developer", "Full-Stack Developer", "WordPress"],
     socialNetworks: [
       // {
       //   name: "LinkedIn",
@@ -34,8 +33,7 @@ export const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl:
-      "/avatars/nkwi_cyril_akinimbom.jpg",
+    imageUrl: "/avatars/nkwi_cyril_akinimbom.jpg",
     firstName: "Nkwi Cyril",
     lastName: "Akinimbom",
     positions: ["WordPress", "Full-Stack Developer", "Mobile App Developer"],
@@ -53,5 +51,5 @@ export const teamList: TeamProps[] = [
         url: "https://x.com/NkwiCyril",
       },
     ],
-  }
+  },
 ];

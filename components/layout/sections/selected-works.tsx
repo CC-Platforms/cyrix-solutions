@@ -18,7 +18,7 @@ async function getProjects() {
 export default async function SelectedProjectsSection() {
   const projects = await getProjects();
   return (
-    <SectionContainer id="projects">
+    <SectionContainer id="portfolio">
       <SectionHeader
         subTitle="Our Portfolio Projects"
         title="Grow Your Business with Cyrix Tech Solutions"
