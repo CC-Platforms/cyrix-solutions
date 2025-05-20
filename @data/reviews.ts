@@ -9,8 +9,8 @@ interface ReviewProps {
 export const reviewList: ReviewProps[] = [
   {
     image: "/avatars/7.png",
-    name: "Michael Brown",
-    userName: "CEO, Retail Co.",
+    name: "Fotsing Tchinda",
+    userName: "CEO, Douala Digital Solutions",
     comment:
       "Cyrix Solutions transformed our outdated website into a high-converting platform. Their expertise is unmatched!",
     rating: 5.0,
@@ -25,8 +25,8 @@ export const reviewList: ReviewProps[] = [
   },
   {
     image: "/avatars/5.png",
-    name: "James Wilson",
-    userName: "CTO, SaaS Firm",
+    name: "Aminata Diallo",
+    userName: "CTO, Sahel Innovations",
     comment:
       "Their custom web app streamlined our operations, saving us hours daily. Highly professional service!",
     rating: 4.9,

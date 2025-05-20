@@ -10,7 +10,7 @@ import { TeamSection } from "@/components/layout/sections/team";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: "Cyrix Solutions - Premium Software & Website Development",
+  title: "Cyrix Tech Solutions - Software & Website Development",
   description:
     "Transform your business with custom websites and software solutions from Cyrix Solutions. High-converting, responsive designs to elevate your brand.",
   openGraph: {
@@ -31,7 +31,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "https://cyrixtechsolutions.com",
-    title: "Cyrix Solutions - Tech That Works For You",
+    title: "Cyrix Tech Solutions - Tech That Works For You",
     description:
       "Expert website development and software solutions for businesses.",
     images: ["/og-image.jpg"], // Placeholder for your image

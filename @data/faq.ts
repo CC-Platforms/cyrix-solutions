@@ -6,33 +6,33 @@ interface FAQProps {
 
 export const FAQList: FAQProps[] = [
   {
-    question: "What types of websites does Cyrix Tech Solutions build?",
+    question: "How can a custom website increase my business revenue?",
     answer:
-      "We specialize in custom website development, including responsive business websites, e-commerce platforms, and interactive web apps tailored to your needs.",
+      "A professionally designed website directly impacts your bottom line by improving customer trust, generating quality leads, and creating 24/7 sales opportunities. Our clients typically see a 30-50% increase in qualified inquiries within 3 months of launch.",
     value: "item-1",
   },
   {
-    question: "How long does it take to build a custom website?",
+    question: "What sets Cyrix Solutions apart from other web development companies?",
     answer:
-      "Project timelines vary based on complexity, but most websites take 4-8 weeks. We provide a detailed timeline during our free consultation.",
+      "Unlike template-based agencies, we build truly custom solutions aligned with your business goals. Our development team specializes in creating high-performance websites with strategic conversion elements that turn visitors into customers.",
     value: "item-2",
   },
   {
-    question: "Do you offer ongoing support after launch?",
+    question: "Will my website work well on mobile devices and different browsers?",
     answer:
-      "Yes, our premium support includes 24/7 assistance, updates, and maintenance to ensure your website or app runs smoothly.",
+      "Absolutely. We develop fully responsive websites that provide optimal viewing experiences across all devices. Our rigorous testing ensures compatibility with all major browsers, giving your customers a seamless experience regardless of how they access your site.",
     value: "item-3",
   },
   {
-    question: "How do you ensure my website is secure?",
+    question: "Do I need technical knowledge to manage my website after it's built?",
     answer:
-      "We implement HTTPS encryption, secure coding practices, and compliance with industry standards to protect your data and users.",
+      "Not at all. We provide user-friendly content management systems and comprehensive training so you can easily update your website. Plus, our clients receive detailed documentation and video tutorials for reference.",
     value: "item-4",
   },
   {
-    question: "Can you integrate my website with existing tools?",
+    question: "What's your approach to creating websites that actually convert visitors?",
     answer:
-      "Absolutely! We offer seamless integrations with tools like payment gateways, CRMs, and analytics platforms to enhance functionality.",
+      "We combine strategic design with data-driven decisions. Each website includes clear calls-to-action, targeted messaging, and intuitive user journeys designed to guide visitors toward conversion. We also implement analytics to continuously optimize performance.",
     value: "item-5",
   },
   {
