@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/layout/theme-provider";
+import { FooterSection } from "@/components/layout/sections/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -33,6 +34,8 @@ export default function RootLayout({
           <Navbar />
 
           {children}
+          
+          <FooterSection />
         </ThemeProvider>
       </body>
     </html>
