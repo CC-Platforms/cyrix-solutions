@@ -2,7 +2,7 @@ import { BenefitsSection } from "@/components/layout/sections/benefits";
 import { ContactSection } from "@/components/layout/sections/contact";
 import { FAQSection } from "@/components/layout/sections/faq";
 // import { FeaturesSection } from "@/components/layout/sections/features";
-import { FooterSection } from "@/components/layout/sections/footer";
+// import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
 import SelectedProjectsSection from "@/components/layout/sections/selected-works";
 import { ServicesSection } from "@/components/layout/sections/services";
