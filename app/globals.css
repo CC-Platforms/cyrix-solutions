@@ -78,6 +78,22 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+
+  img {
+    @apply rounded-xl;
+  }
+  article {
+    @apply space-y-6;
+  }
+  article p {
+    @apply text-muted-foreground leading-7;
+  }
+  article h2,
+  article h3,
+  article h4,
+  article h5 {
+    @apply text-2xl font-semibold pt-4;
+  }
 }
 
 h1,
